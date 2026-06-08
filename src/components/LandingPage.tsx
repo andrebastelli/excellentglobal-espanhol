@@ -503,25 +503,19 @@ function LandingPage() {
       </header>
 
       <main role="main" id="top">
-        {/* HERO */}
-<section className="relative overflow-hidden text-white">
+       {/* HERO */}
+<section className="relative overflow-hidden bg-gradient-hero text-white">
 
-  {/* IMAGEM DE FUNDO */}
-<div
-  className="absolute inset-0 bg-cover bg-center opacity-20"
-  style={{
-    backgroundImage: "url('/hero-espanhol.png')",
-  }}
-/>
+  {/* IMAGEM SUPER SUTIL */}
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay"
+    style={{
+      backgroundImage: "url('/hero-espanhol.png')",
+    }}
+  />
 
-{/* OVERLAY AZUL FORTE (DOMINA A COR) */}
-<div className="absolute inset-0 bg-primary/90" />
-
-{/* GRADIENTE SUAVE (não brigar com a imagem) */}
-<div className="absolute inset-0 bg-gradient-to-br from-primary/95 via-primary/85 to-primary/95" />
-
-{/* EFEITO RADIAL */}
-<div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_60%,white,transparent_40%)]" />
+  {/* EFEITO RADIAL (mantém seu estilo original) */}
+  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_60%,white,transparent_40%)]" />
 
   <div className="relative mx-auto max-w-7xl px-5 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
     
