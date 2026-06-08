@@ -89,7 +89,6 @@ function AgendamentoSection() {
   const [horariosReservados, setHorariosReservados] = useState<string[]>([]);
   const [carregando, setCarregando] = useState(false);
   const [agora, setAgora] = useState(new Date());
-  const [origem, setOrigem] = useState("");
   const inputDataRef = useRef<HTMLInputElement>(null);
 
   const hoje = new Date();
