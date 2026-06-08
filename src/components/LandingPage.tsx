@@ -557,6 +557,25 @@ function LandingPage() {
                 loading="eager"
                 className="relative w-full h-auto rounded-3xl shadow-elegant object-cover aspect-[3/2]"
               />
+            
+            <div className="absolute top-4 right-4 flex gap-2">
+  {[
+    { src: "https://flagcdn.com/w40/es.png", alt: "Espanha" },
+    { src: "https://flagcdn.com/w40/mx.png", alt: "México" },
+    { src: "https://flagcdn.com/w40/ar.png", alt: "Argentina" },
+  ].map((flag) => (
+    <img
+      key={flag.alt}
+      src={flag.src}
+      alt={flag.alt}
+      className="w-8 h-8 rounded-full object-cover border-2 border-white shadow-md"
+    />
+  ))}
+</div>
+
+<div className="absolute top-16 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow">
+  Espanhol • América Latina + Espanha
+</div>
 
               <div className="absolute -bottom-5 -left-5 bg-white text-foreground rounded-2xl p-4 shadow-elegant flex items-center gap-3 max-w-[230px]">
                 <div className="flex -space-x-2">
