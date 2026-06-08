@@ -495,24 +495,23 @@ function LandingPage() {
           <div className="relative mx-auto max-w-7xl px-5 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-semibold tracking-wide">
-                <MapPin className="h-3.5 w-3.5" /> LIMEIRA / SP — ESCOLA DE INGLÊS
+                <MapPin className="h-3.5 w-3.5" /> LIMEIRA / SP — ESCOLA DE ESPANHOL
               </span>
 
               <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
-                Curso de Inglês em Limeira com Conversação Real
+                Curso de Espanhol em Limeira para Conversar com Confiança Desde a Primeira Aula
               </h1>
 
               <p className="mt-5 text-lg md:text-xl text-white/85 max-w-xl">
-                Aprenda inglês com uma metodologia prática, não-linear e focada em fazer você ganhar
-                confiança para conversar desde as primeiras aulas. Agende sua aula demonstrativa gratuita.
+                Mesmo que você seja iniciante, aprenda espanhol de forma prática e comece a falar desde as primeiras aulas. Método direto ao ponto, focado em conversação real.
               </p>
 
               <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/90">
                 {[
                   "+25 anos de experiência",
                   "+4.000 alunos",
-                  "Aulas 100% conversação",
-                  "Certificado",
+                  "Aulas focadas em conversação",
+                  "Certificado reconhecido",
                 ].map((t) => (
                   <li key={t} className="flex items-center gap-1.5">
                     <CheckCircle2 className="h-4 w-4 text-[oklch(0.85_0.18_145)]" /> {t}
@@ -538,6 +537,10 @@ function LandingPage() {
               </div>
 
               <p className="mt-3 text-sm text-white/75">
+                Ideal para viagens, trabalho e conversação no dia a dia.
+              </p>
+
+              <p className="mt-3 text-sm text-white/75">
                 Escolha o melhor dia e horário para sua aula experimental gratuita em Limeira/SP.
               </p>
             </div>
@@ -547,7 +550,7 @@ function LandingPage() {
 
               <img
                 src={heroImg}
-                alt="Professora conduzindo aula de conversação em inglês com alunos engajados na Excellent Global, Limeira"
+                alt="Professora conduzindo aula de conversação em espanhol com alunos engajados na Excellent Global, Limeira"
                 width={1536}
                 height={1024}
                 fetchPriority="high"
@@ -582,25 +585,24 @@ function LandingPage() {
         <section className="py-20 md:py-28">
           <div className="mx-auto max-w-5xl px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Você entende inglês, mas trava na hora de falar?
+              Você até entende espanhol, mas trava na hora de falar?
             </h2>
 
             <p className="mt-5 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Muitas pessoas estudam inglês por anos, decoram regras e fazem exercícios, mas continuam
-              inseguras quando precisam conversar. Na Excellent Global, o foco é diferente: você pratica,
-              revisa e evolui com acompanhamento.
+              A maioria das pessoas estuda espanhol por anos, mas não consegue conversar na prática.
+              Aqui, você aprende falando — com orientação, correção e prática real desde o início.
             </p>
           </div>
 
           <div className="mx-auto max-w-6xl px-5 mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "Tenho vergonha de falar inglês.",
-              "Já comecei outros cursos e parei.",
-              "Entendo algumas palavras, mas não consigo conversar.",
-              "Preciso do inglês para trabalho ou viagem.",
-              "Quero aprender de forma prática.",
-              "Quero evoluir com professores de verdade.",
-            ].map((dor) => (
+                "Tenho vergonha de falar espanhol.",
+                "Entendo, mas não consigo responder.",
+                "Preciso do espanhol para viagens ou trabalho.",
+                "Já tentei aprender e não evoluí.",
+                "Quero aprender rápido e na prática.",
+                "Quero perder o medo de conversar.",
+              ].map((dor) => (
               <div
                 key={dor}
                 className="bg-card border border-border rounded-2xl p-5 shadow-soft hover:border-primary/30 hover:-translate-y-0.5 transition"
@@ -636,13 +638,13 @@ function LandingPage() {
               {[
                 {
                   i: Mic,
-                  t: "Aulas 100% conversação",
-                  d: "Você aprende praticando o inglês em situações reais, ganhando confiança para falar.",
+                  t: "Conversação desde a primeira aula",
+                  d: "Você começa a falar espanhol desde o início, mesmo sendo iniciante.",
                 },
                 {
                   i: RotateCw,
-                  t: "Metodologia não-linear",
-                  d: "Os conteúdos são revisados de forma constante e estratégica para melhorar a retenção.",
+                  t: "Método prático e direto",
+                  d: "Nada de teoria excessiva — foco total no que você realmente vai usar.",
                 },
                 {
                   i: Award,
@@ -688,13 +690,12 @@ function LandingPage() {
               <span className="text-sm font-bold text-primary uppercase tracking-wider">Metodologia</span>
 
               <h2 className="mt-2 text-3xl md:text-4xl font-extrabold">
-                Uma metodologia para quem quer falar inglês de verdade
+                Um método pensado para destravar seu espanhol
               </h2>
 
               <p className="mt-5 text-lg text-muted-foreground">
-                A metodologia da Excellent Global é não-linear e trabalha com revisão constante, prática
-                guiada e conversação. Isso permite que o aluno não apenas memorize conteúdos, mas consiga
-                usar o inglês com mais segurança no dia a dia.
+                Aqui você não fica preso em regras gramaticais. Você aprende espanhol usando,
+                praticando e repetindo em situações reais, até ganhar confiança para conversar naturalmente.
               </p>
 
               <ol className="mt-7 space-y-3">
@@ -718,7 +719,7 @@ function LandingPage() {
 
               <blockquote className="mt-8 p-5 border-l-4 border-accent bg-accent/5 rounded-r-xl">
                 <p className="text-lg font-semibold italic">
-                  "Aqui, o inglês não fica só no papel. Ele vira conversa."
+                  "Aqui, o espanhol sai do papel e vira conversa de verdade."
                 </p>
               </blockquote>
 
@@ -748,12 +749,11 @@ function LandingPage() {
 
           <div className="relative mx-auto max-w-5xl px-5 text-center">
             <h2 className="text-3xl md:text-4xl font-extrabold">
-              Resgate sua aula demonstrativa gratuita de inglês
+              Experimente uma aula de espanhol gratuita
             </h2>
 
             <p className="mt-5 text-lg text-white/85 max-w-2xl mx-auto">
-              Antes de escolher um curso, você pode viver a experiência Excellent Global na prática.
-              Conheça a metodologia, entenda o funcionamento das aulas e receba orientação sobre o melhor caminho para começar.
+              Antes de decidir, você pode testar na prática. Conheça o método, fale espanhol na aula e entenda exatamente como será sua evolução.
             </p>
 
             <div className="mt-12 grid md:grid-cols-3 gap-5 text-left">
@@ -807,7 +807,7 @@ function LandingPage() {
               <span className="text-sm font-bold text-primary uppercase tracking-wider">Programas</span>
 
               <h2 className="mt-2 text-3xl md:text-4xl font-extrabold">
-                Escolha o ritmo ideal para aprender inglês
+                Escolha como você quer aprender espanhol
               </h2>
 
               <p className="mt-4 text-muted-foreground text-lg">
@@ -847,19 +847,19 @@ function LandingPage() {
         <section className="py-20 md:py-28 bg-secondary/40">
           <div className="mx-auto max-w-5xl px-5">
             <h2 className="text-3xl md:text-4xl font-extrabold text-center max-w-3xl mx-auto">
-              O curso de inglês da Excellent Global é para você que...
+              Esse curso de espanhol é para você que:
             </h2>
 
             <ul className="mt-12 grid sm:grid-cols-2 gap-4">
               {[
-                "Quer aprender inglês em Limeira.",
-                "Precisa falar inglês para crescer profissionalmente.",
-                "Quer viajar com mais segurança.",
-                "Deseja estudar fora ou participar de intercâmbio.",
-                "Já tentou aprender antes, mas não conseguiu manter evolução.",
-                "Quer praticar conversação desde o início.",
-                "Prefere aprender com professores e acompanhamento.",
-                "Busca uma escola com estrutura física e tradição.",
+                "Quer aprender espanhol em Limeira.",
+                "Quer viajar e se comunicar com confiança.",
+                "Precisa do espanhol para trabalho.",
+                "Quer aprender rápido e na prática.",
+                "Já tentou antes e não evoluiu.",
+                "Quer perder o medo de falar.",
+                "Prefere aulas com acompanhamento.",
+                "Busca um método que realmente funciona.",
               ].map((p) => (
                 <li key={p} className="flex items-start gap-3 bg-card border border-border rounded-xl p-4">
                   <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
@@ -888,14 +888,13 @@ function LandingPage() {
               <span className="text-sm font-bold text-primary uppercase tracking-wider">Intercâmbio cultural</span>
 
               <h2 className="mt-2 text-3xl md:text-4xl font-extrabold">
-                Aprenda inglês e conecte-se com o mundo
-              </h2>
+  Aprenda espanhol e conecte-se com o mundo
+</h2>
 
-              <p className="mt-5 text-lg text-muted-foreground">
-                A Excellent Global também oferece experiências de intercâmbio cultural, proporcionando aos
-                alunos contato com a cultura norte-americana e oportunidades de vivenciar o idioma de
-                maneira mais profunda.
-              </p>
+<p className="mt-5 text-lg text-muted-foreground">
+  Tenha contato com culturas da América Latina e Espanha, ampliando suas oportunidades
+  pessoais e profissionais através do idioma.
+</p>
 
               <div className="mt-8">
                 <CTA event="click_whatsapp_intercambio">
@@ -910,7 +909,7 @@ function LandingPage() {
         <section className="py-20 md:py-28 bg-secondary/40">
           <div className="mx-auto max-w-6xl px-5">
             <h2 className="text-3xl md:text-4xl font-extrabold text-center">
-              O que nossos alunos dizem
+              Depoimento sobre a evolução no espanhol e confiança para conversar.
             </h2>
 
             <div className="mt-12 grid md:grid-cols-3 gap-6">
@@ -997,12 +996,12 @@ function LandingPage() {
             <div className="mt-12 space-y-3">
               {[
                 [
-                  "A aula demonstrativa é realmente gratuita?",
-                  "Sim. A aula demonstrativa é gratuita e serve para você conhecer a metodologia da Excellent Global antes de iniciar.",
+                  "A aula gratuita é mesmo sem custo?",
+                  "Sim. A aula é 100% gratuita para você conhecer o método antes de começar.",
                 ],
                 [
-                  "O curso é para iniciantes?",
-                  "Sim. A metodologia permite que alunos iniciantes também comecem a desenvolver o inglês de forma progressiva.",
+                  "Preciso saber algo de espanhol?",
+                  "Não. Você pode começar do zero.",
                 ],
                 [
                   "As aulas são presenciais em Limeira?",
@@ -1044,13 +1043,12 @@ function LandingPage() {
 
           <div className="relative mx-auto max-w-3xl px-5">
             <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
-              Dê o primeiro passo para falar inglês com confiança
+              Comece a falar espanhol com confiança
             </h2>
 
             <p className="mt-5 text-lg md:text-xl text-white/85">
-              Agende sua aula demonstrativa gratuita e conheça a metodologia da Excellent Global na prática.
+              Agende sua aula gratuita e descubra como é possível aprender espanhol de verdade.
             </p>
-
             <div className="mt-10 flex flex-wrap justify-center gap-3">
               <a
                 href="#agendamento"
@@ -1077,8 +1075,7 @@ function LandingPage() {
             </div>
 
             <p className="mt-3 text-primary-foreground/75 text-sm">
-              Escola de inglês em Limeira/SP. +25 anos formando alunos com conversação real e
-              metodologia prática.
+              Escola de espanhol em Limeira/SP. +25 anos formando alunos com conversação real e metodologia prática.
             </p>
           </div>
 
