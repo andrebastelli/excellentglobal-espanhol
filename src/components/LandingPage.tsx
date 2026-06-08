@@ -510,14 +510,17 @@ function LandingPage() {
   <div
     className="absolute inset-0 bg-cover bg-center"
     style={{
-      backgroundImage: "url('/images/hero-espanhol.jpg')", // troque pelo seu caminho
+      backgroundImage: "url('/public/hero-espanhol.png')",
     }}
   />
 
-  {/* OVERLAY ESCURO PRA LEGIBILIDADE */}
-  <div className="absolute inset-0 bg-black/60" />
+  {/* OVERLAY AZUL (ESSENCIAL PRA MARCA) */}
+  <div className="absolute inset-0 bg-primary/80" />
 
-  {/* EFEITO RADIAL (opcional, mantém seu estilo) */}
+  {/* GRADIENTE EXTRA PRA DAR PROFUNDIDADE */}
+  <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-primary/90" />
+
+  {/* EFEITO RADIAL (se quiser manter estilo) */}
   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_60%,white,transparent_40%)]" />
 
   <div className="relative mx-auto max-w-7xl px-5 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
@@ -532,7 +535,7 @@ function LandingPage() {
         Curso de Espanhol em Limeira para Conversar com Confiança Desde a Primeira Aula
       </h1>
 
-      <p className="mt-5 text-lg md:text-xl text-white/85 max-w-xl">
+      <p className="mt-5 text-lg md:text-xl text-white/90 max-w-xl">
         Mesmo que você seja iniciante, aprenda espanhol de forma prática e comece a falar desde as primeiras aulas.
       </p>
 
@@ -554,7 +557,7 @@ function LandingPage() {
       </div>
     </div>
 
-    {/* LADO DIREITO (mantém imagem + elementos) */}
+    {/* DIREITA */}
     <div className="relative">
       <div className="absolute -inset-4 bg-gradient-accent rounded-3xl blur-2xl opacity-30" />
 
