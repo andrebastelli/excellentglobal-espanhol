@@ -22,23 +22,6 @@ import {
 import egLogo from "@/assets/eg-logo.png";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-useEffect(() => {
-  const links = document.querySelectorAll("[data-event]");
-
-  links.forEach((el) => {
-    el.addEventListener("click", () => {
-      const event = el.getAttribute("data-event");
-      if (event) {
-        const ORIGEM = "ESPANHOL";
-
-          useEffect(() => {
-            localStorage.setItem("origem_lp", ORIGEM);
-          }, []);
-      }
-    });
-  });
-}, []);
-
 // ============================================================
 // EDITE AQUI: número do WhatsApp ou defina VITE_WHATSAPP_NUMBER no .env
 // ============================================================
@@ -170,7 +153,7 @@ const carregarHorariosReservados = async () => {
 };
 
   const enviarWhatsApp = async () => {
-  const origem = localStorage.getItem("origem_lp") || "direto";
+  const origem = localStorage.getItem("origem_lp") || "LP - Curso de Espanhol";
   if (!nome || !email || !objetivo || !nivel || !data || !horario) {
   alert("Preencha nome, e-mail, objetivo, nível, data e horário antes de enviar.");
   return;
