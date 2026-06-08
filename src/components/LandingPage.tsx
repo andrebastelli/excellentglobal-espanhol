@@ -510,7 +510,7 @@ function LandingPage() {
   <div
     className="absolute inset-0 bg-cover bg-center"
     style={{
-      backgroundImage: "url('/public/hero-espanhol.png')",
+      backgroundImage: "url('/hero-espanhol.png')",
     }}
   />
 
