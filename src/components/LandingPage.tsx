@@ -590,7 +590,7 @@ function LandingPage() {
 
 <div className="absolute top-16 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow">
   Espanhol • América Latina + Espanha
-</div>
+</div> 
 
               <div className="absolute -bottom-5 -left-5 bg-white text-foreground rounded-2xl p-4 shadow-elegant flex items-center gap-3 max-w-[230px]">
                 <div className="flex -space-x-2">
