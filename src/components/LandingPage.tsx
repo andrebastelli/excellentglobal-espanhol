@@ -22,6 +22,19 @@ import {
 import egLogo from "@/assets/eg-logo.png";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+useEffect(() => {
+  const links = document.querySelectorAll("[data-event]");
+
+  links.forEach((el) => {
+    el.addEventListener("click", () => {
+      const event = el.getAttribute("data-event");
+      if (event) {
+        localStorage.setItem("origem_lp", event);
+      }
+    });
+  });
+}, []);
+
 // ============================================================
 // EDITE AQUI: número do WhatsApp ou defina VITE_WHATSAPP_NUMBER no .env
 // ============================================================
@@ -76,6 +89,7 @@ function AgendamentoSection() {
   const [horariosReservados, setHorariosReservados] = useState<string[]>([]);
   const [carregando, setCarregando] = useState(false);
   const [agora, setAgora] = useState(new Date());
+  const [origem, setOrigem] = useState("");
   const inputDataRef = useRef<HTMLInputElement>(null);
 
   const hoje = new Date();
@@ -153,6 +167,7 @@ const carregarHorariosReservados = async () => {
 };
 
   const enviarWhatsApp = async () => {
+  const origem = localStorage.getItem("origem_lp") || "direto";
   if (!nome || !email || !objetivo || !nivel || !data || !horario) {
   alert("Preencha nome, e-mail, objetivo, nível, data e horário antes de enviar.");
   return;
@@ -182,6 +197,7 @@ if (new Date(`${data}T${horario}:00`) <= new Date()) {
   nivel,
   data,
   horario,
+  origem,
 }),
     });
 
@@ -206,6 +222,7 @@ Objetivo do aprendizado: ${objetivo}
 Nível de conhecimento: ${nivel}
 Data escolhida: ${dataFormatada}
 Horário escolhido: ${horario}
+Origem da página: ${origem}
 
 Aguardo a confirmação do professor.
 `.trim();
@@ -455,6 +472,18 @@ const horarioJaPassou = (h: string) => {
 }
 
 function LandingPage() {
+   useEffect(() => {
+    const links = document.querySelectorAll("[data-event]");
+
+    links.forEach((el) => {
+      el.addEventListener("click", () => {
+        const event = el.getAttribute("data-event");
+        if (event) {
+          localStorage.setItem("origem_lp", event);
+        }
+      });
+    });
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
