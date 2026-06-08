@@ -153,7 +153,7 @@ const carregarHorariosReservados = async () => {
 };
 
   const enviarWhatsApp = async () => {
-  const origem = localStorage.getItem("origem_lp") || "direto";
+  const origem = localStorage.getItem("origem_lp") || "LP - Curso de Espanhol";
   if (!nome || !email || !objetivo || !nivel || !data || !horario) {
   alert("Preencha nome, e-mail, objetivo, nível, data e horário antes de enviar.");
   return;
