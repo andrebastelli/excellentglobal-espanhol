@@ -22,23 +22,6 @@ import {
 import egLogo from "@/assets/eg-logo.png";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
-useEffect(() => {
-  const links = document.querySelectorAll("[data-event]");
-
-  links.forEach((el) => {
-    el.addEventListener("click", () => {
-      const event = el.getAttribute("data-event");
-      if (event) {
-        const ORIGEM = "ESPANHOL";
-
-          useEffect(() => {
-            localStorage.setItem("origem_lp", ORIGEM);
-          }, []);
-      }
-    });
-  });
-}, []);
-
 // ============================================================
 // EDITE AQUI: número do WhatsApp ou defina VITE_WHATSAPP_NUMBER no .env
 // ============================================================
