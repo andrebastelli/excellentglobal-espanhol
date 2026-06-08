@@ -29,7 +29,11 @@ useEffect(() => {
     el.addEventListener("click", () => {
       const event = el.getAttribute("data-event");
       if (event) {
-        localStorage.setItem("origem_lp", event);
+        const ORIGEM = "ESPANHOL";
+
+          useEffect(() => {
+            localStorage.setItem("origem_lp", ORIGEM);
+          }, []);
       }
     });
   });
