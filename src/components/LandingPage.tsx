@@ -1112,7 +1112,7 @@ function LandingPage() {
         </div>
 
         <div className="mx-auto max-w-6xl px-5 mt-10 pt-6 border-t border-white/10 text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} Excellent Global — Curso de Inglês em Limeira. Todos os direitos reservados. Desenvolvido por{" "}
+          © {new Date().getFullYear()} Excellent Global — Curso de Espanhol em Limeira. Todos os direitos reservados. Desenvolvido por{" "}
 <a
   href="https://bastelliconsultoria.com.br/"
   target="_blank"
