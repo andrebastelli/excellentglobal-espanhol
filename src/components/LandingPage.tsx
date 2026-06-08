@@ -22,6 +22,19 @@ import {
 import egLogo from "@/assets/eg-logo.png";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
+useEffect(() => {
+  const links = document.querySelectorAll("[data-event]");
+
+  links.forEach((el) => {
+    el.addEventListener("click", () => {
+      const event = el.getAttribute("data-event");
+      if (event) {
+        localStorage.setItem("origem_lp", event);
+      }
+    });
+  });
+}, []);
+
 // ============================================================
 // EDITE AQUI: número do WhatsApp ou defina VITE_WHATSAPP_NUMBER no .env
 // ============================================================
@@ -153,6 +166,7 @@ const carregarHorariosReservados = async () => {
 };
 
   const enviarWhatsApp = async () => {
+  const origem = localStorage.getItem("origem_lp") || "direto";
   if (!nome || !email || !objetivo || !nivel || !data || !horario) {
   alert("Preencha nome, e-mail, objetivo, nível, data e horário antes de enviar.");
   return;
@@ -182,6 +196,7 @@ if (new Date(`${data}T${horario}:00`) <= new Date()) {
   nivel,
   data,
   horario,
+  origem,
 }),
     });
 
@@ -206,6 +221,7 @@ Objetivo do aprendizado: ${objetivo}
 Nível de conhecimento: ${nivel}
 Data escolhida: ${dataFormatada}
 Horário escolhido: ${horario}
+Origem da página: ${origem}
 
 Aguardo a confirmação do professor.
 `.trim();
@@ -455,6 +471,18 @@ const horarioJaPassou = (h: string) => {
 }
 
 function LandingPage() {
+   useEffect(() => {
+    const links = document.querySelectorAll("[data-event]");
+
+    links.forEach((el) => {
+      el.addEventListener("click", () => {
+        const event = el.getAttribute("data-event");
+        if (event) {
+          localStorage.setItem("origem_lp", event);
+        }
+      });
+    });
+  }, []);
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
@@ -557,6 +585,25 @@ function LandingPage() {
                 loading="eager"
                 className="relative w-full h-auto rounded-3xl shadow-elegant object-cover aspect-[3/2]"
               />
+            
+            <div className="absolute top-4 right-4 flex gap-2">
+  {[
+    { src: "https://flagcdn.com/w40/es.png", alt: "Espanha" },
+    { src: "https://flagcdn.com/w40/mx.png", alt: "México" },
+    { src: "https://flagcdn.com/w40/ar.png", alt: "Argentina" },
+  ].map((flag) => (
+    <img
+      key={flag.alt}
+      src={flag.src}
+      alt={flag.alt}
+      className="w-8 h-8 rounded-full object-cover border-2 border-white shadow-md"
+    />
+  ))}
+</div>
+
+<div className="absolute top-16 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow">
+  Espanhol • América Latina + Espanha
+</div>
 
               <div className="absolute -bottom-5 -left-5 bg-white text-foreground rounded-2xl p-4 shadow-elegant flex items-center gap-3 max-w-[230px]">
                 <div className="flex -space-x-2">
