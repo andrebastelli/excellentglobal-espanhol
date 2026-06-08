@@ -503,115 +503,87 @@ function LandingPage() {
       </header>
 
       <main role="main" id="top">
-        {/* HERO */}
-        <section className="relative overflow-hidden bg-gradient-hero text-white">
-          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_60%,white,transparent_40%)]" />
+       {/* HERO */}
+<section className="relative overflow-hidden bg-gradient-hero text-white">
 
-          <div className="relative mx-auto max-w-7xl px-5 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-semibold tracking-wide">
-                <MapPin className="h-3.5 w-3.5" /> LIMEIRA / SP — ESCOLA DE ESPANHOL
-              </span>
+  {/* IMAGEM SUPER SUTIL */}
+  <div
+    className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay"
+    style={{
+      backgroundImage: "url('/hero-espanhol.png')",
+    }}
+  />
 
-              <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
-                Curso de Espanhol em Limeira para Conversar com Confiança Desde a Primeira Aula
-              </h1>
+  {/* EFEITO RADIAL (mantém seu estilo original) */}
+  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_20%,white,transparent_40%),radial-gradient(circle_at_80%_60%,white,transparent_40%)]" />
 
-              <p className="mt-5 text-lg md:text-xl text-white/85 max-w-xl">
-                Mesmo que você seja iniciante, aprenda espanhol de forma prática e comece a falar desde as primeiras aulas. Método direto ao ponto, focado em conversação real.
-              </p>
+  <div className="relative mx-auto max-w-7xl px-5 py-16 md:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    
+    {/* TEXTO */}
+    <div>
+      <span className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur px-4 py-1.5 text-xs font-semibold tracking-wide">
+        <MapPin className="h-3.5 w-3.5" /> LIMEIRA / SP — ESCOLA DE ESPANHOL
+      </span>
 
-              <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-white/90">
-                {[
-                  "+25 anos de experiência",
-                  "+4.000 alunos",
-                  "Aulas focadas em conversação",
-                  "Certificado reconhecido",
-                ].map((t) => (
-                  <li key={t} className="flex items-center gap-1.5">
-                    <CheckCircle2 className="h-4 w-4 text-[oklch(0.85_0.18_145)]" /> {t}
-                  </li>
-                ))}
-              </ul>
+      <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05]">
+        Curso de Espanhol em Limeira para Conversar com Confiança Desde a Primeira Aula
+      </h1>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-               <a
-  href="#agendamento"
-  className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-primary px-6 py-3 text-sm font-bold shadow-lg hover:bg-white/90 transition-colors"
->
-  <Sparkles className="h-5 w-5" />
-  Agendar aula demonstrativa grátis
-</a>
+      <p className="mt-5 text-lg md:text-xl text-white/90 max-w-xl">
+        Mesmo que você seja iniciante, aprenda espanhol de forma prática e comece a falar desde as primeiras aulas.
+      </p>
 
-                <a
-                  href="#agendamento"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white px-6 py-3 text-sm font-bold hover:bg-white/25 transition-colors"
-                >
-                  Escolher melhor dia e horário
-                </a>
-              </div>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <a
+          href="#agendamento"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-white text-primary px-6 py-3 text-sm font-bold shadow-lg hover:bg-white/90 transition-colors"
+        >
+          <Sparkles className="h-5 w-5" />
+          Agendar aula demonstrativa grátis
+        </a>
 
-              <p className="mt-3 text-sm text-white/75">
-                Ideal para viagens, trabalho e conversação no dia a dia.
-              </p>
+        <a
+          href="#agendamento"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white px-6 py-3 text-sm font-bold hover:bg-white/25 transition-colors"
+        >
+          Escolher melhor dia e horário
+        </a>
+      </div>
+    </div>
 
-              <p className="mt-3 text-sm text-white/75">
-                Escolha o melhor dia e horário para sua aula experimental gratuita em Limeira/SP.
-              </p>
-            </div>
+    {/* DIREITA */}
+    <div className="relative">
+      <div className="absolute -inset-4 bg-gradient-accent rounded-3xl blur-2xl opacity-30" />
 
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-accent rounded-3xl blur-2xl opacity-30" />
+      <img
+        src={heroImg}
+        alt="Aula de espanhol"
+        className="relative w-full h-auto rounded-3xl shadow-elegant object-cover aspect-[3/2]"
+      />
 
-              <img
-                src={heroImg}
-                alt="Professora conduzindo aula de conversação em espanhol com alunos engajados na Excellent Global, Limeira"
-                width={1536}
-                height={1024}
-                fetchPriority="high"
-                loading="eager"
-                className="relative w-full h-auto rounded-3xl shadow-elegant object-cover aspect-[3/2]"
-              />
-            
-            <div className="absolute top-4 right-4 flex gap-2">
-  {[
-    { src: "https://flagcdn.com/w40/es.png", alt: "Espanha" },
-    { src: "https://flagcdn.com/w40/mx.png", alt: "México" },
-    { src: "https://flagcdn.com/w40/ar.png", alt: "Argentina" },
-  ].map((flag) => (
-    <img
-      key={flag.alt}
-      src={flag.src}
-      alt={flag.alt}
-      className="w-8 h-8 rounded-full object-cover border-2 border-white shadow-md"
-    />
-  ))}
-</div>
+      {/* FLAGS */}
+      <div className="absolute top-4 right-4 flex gap-2 z-20">
+        {[
+          { src: "https://flagcdn.com/w40/es.png", alt: "Espanha" },
+          { src: "https://flagcdn.com/w40/mx.png", alt: "México" },
+          { src: "https://flagcdn.com/w40/ar.png", alt: "Argentina" },
+        ].map((flag) => (
+          <img
+            key={flag.alt}
+            src={flag.src}
+            alt={flag.alt}
+            className="w-8 h-8 rounded-full object-cover border-2 border-white shadow-md"
+          />
+        ))}
+      </div>
 
-<div className="absolute top-16 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow">
-  Espanhol • América Latina + Espanha
-</div> 
-
-              <div className="absolute -bottom-5 -left-5 bg-white text-foreground rounded-2xl p-4 shadow-elegant flex items-center gap-3 max-w-[230px]">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="h-9 w-9 rounded-full bg-gradient-accent border-2 border-white" />
-                  ))}
-                </div>
-
-                <div>
-                  <div className="flex text-[oklch(0.78_0.17_75)]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-3.5 w-3.5 fill-current" />
-                    ))}
-                  </div>
-
-                  <p className="text-xs text-muted-foreground font-medium">+4.000 alunos atendidos</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* LABEL */}
+      <div className="absolute top-16 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow z-20">
+        Curso de Espanhol • Conversação Real
+      </div>
+    </div>
+  </div>
+</section>
 
         <AgendamentoSection />
 
@@ -767,7 +739,7 @@ function LandingPage() {
             <div className="relative">
               <img
                 src={teacherImg}
-                alt="Professora de inglês orientando aluna em aula de conversação"
+                alt="Professora de espanhol orientando aluna em aula de conversação"
                 width={1024}
                 height={768}
                 loading="lazy"
