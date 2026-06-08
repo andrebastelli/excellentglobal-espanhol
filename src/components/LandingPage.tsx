@@ -767,7 +767,7 @@ function LandingPage() {
             <div className="relative">
               <img
                 src={teacherImg}
-                alt="Professora de inglês orientando aluna em aula de conversação"
+                alt="Professora de espanhol orientando aluna em aula de conversação"
                 width={1024}
                 height={768}
                 loading="lazy"
