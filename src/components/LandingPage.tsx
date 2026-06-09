@@ -581,9 +581,26 @@ function LandingPage() {
       <div className="absolute top-16 right-4 bg-white/90 backdrop-blur text-primary text-xs font-bold px-3 py-1.5 rounded-full shadow z-20">
         Curso de Espanhol • Conversação Real
       </div>
-    </div>
-  </div>
-</section>
+    <div className="absolute -bottom-5 -left-5 bg-white text-foreground rounded-2xl p-4 shadow-elegant flex items-center gap-3 max-w-[230px]">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="h-9 w-9 rounded-full bg-gradient-accent border-2 border-white" />
+                  ))}
+                </div>
+
+                <div>
+                  <div className="flex text-[oklch(0.78_0.17_75)]">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-current" />
+                    ))}
+                  </div>
+
+                  <p className="text-xs text-muted-foreground font-medium">+4.000 alunos atendidos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <AgendamentoSection />
 
