@@ -26,6 +26,17 @@ import { useEffect, type ReactNode } from "react";
 // EDITE AQUI: número do WhatsApp ou defina VITE_WHATSAPP_NUMBER no .env
 // ============================================================
 
+const WHATSAPP_NUMBER =
+  import.meta.env.VITE_WHATSAPP_NUMBER || "5519987837602";
+
+const WHATSAPP_LINK = (mensagem: string) => {
+  const origem = localStorage.getItem("origem_lp") || "LP Espanhol";
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    `${mensagem}\n\nOrigem: ${origem}`
+  )}`;
+};
+
 function CTA({
   event,
   variant = "primary",
