@@ -26,11 +26,6 @@ import { useEffect, type ReactNode } from "react";
 // EDITE AQUI: número do WhatsApp ou defina VITE_WHATSAPP_NUMBER no .env
 // ============================================================
 
-const GOOGLE_SHEETS_API_URL =
-  "https://script.google.com/macros/s/AKfycbxUoeXRWbH4BhDmJ5p4gIlCWKD5hkeSmJ9M9-xW6hXiTp3X3Zyx_lPxmhLLbJsyaV2p/exec";
-
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "5519999999999";
-
 function CTA({
   event,
   variant = "primary",
